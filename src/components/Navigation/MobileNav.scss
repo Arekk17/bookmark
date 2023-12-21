@@ -1,0 +1,88 @@
+@import '../../styles/theme.scss';
+
+.mobileNavigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(16, 18, 38, 0.9);
+  height: 100%;
+  animation: slideIn 0.3s ease-in-out;
+
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $grayish;
+  }
+
+  &-buttons {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__button {
+      cursor: pointer;
+      color: white;
+      font-size: 28px;
+      width: 100%;
+      background-color: transparent;
+      padding: 2rem;
+      border: none;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $grayish;
+      margin-bottom: 10px;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+
+  &__social {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    button {
+      background: none;
+      border: none;
+      margin: 10px;
+    }
+  }
+  &.closing {
+    animation: slideOut 0.3s ease-in-out;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+}

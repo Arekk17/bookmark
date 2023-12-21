@@ -1,0 +1,24 @@
+@import '../../../styles/theme.scss';
+
+.centerTitleLayout {
+  width: 100%;
+  margin-bottom: 100px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &-text {
+    text-align: center;
+  &__title{
+    font-size: $font-size-xl;
+    color: $dark-blue;
+  }
+  &__description{
+    font-size: $font-size-s;
+    max-width: 500px;
+    color: $grayish;
+    margin: 20px;
+  }
+  }
+}

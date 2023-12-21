@@ -1,0 +1,54 @@
+@import '../../styles/theme.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0px 16px 22px -14px rgba(66, 68, 90, 1);
+
+  &-text {
+    margin: 10px 0;
+
+    &__title {
+      font-size: $font-size-s;
+      color: $dark-blue;
+      font-weight: 600;
+    }
+
+    &__description {
+      color: $grayish;
+    }
+  }
+
+  &-dotted {
+    margin: 20px 0;
+  }
+
+  &:nth-child(2) {
+    margin-top: 80px;
+  }
+
+  &:nth-child(3) {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../styles/theme.scss';
+
+.hidden {
+  visibility: hidden;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 80px;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+  &-logo {
+    margin-right: auto;
+    a {
+      text-decoration: none;
+    }
+  }
+  &-hamburger {
+    margin-left: auto;
+    display: flex;
+  }
+  &-buttons {
+    display: flex;
+    &__button {
+      padding: 0 30px;
+      border: none;
+      background-color: transparent;
+      color: $dark-blue;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      &:hover {
+        color: $light-red;
+      }
+    }
+  }
+}
